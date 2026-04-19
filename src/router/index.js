@@ -1,0 +1,48 @@
+import { Router } from "express";
+import ingredientRouter from "./ingredient.router.js";
+import ingredientGroupRouter from "./ingredientGroup.router.js";
+import authRouter from "./auth.router.js";
+import userRouter from './user.router.js';
+import dishRouter from './dish.router.js';
+import menuRouter from './menu.router.js';
+import orgRouter from './org.router.js';
+import uomRouter from './uom.router.js';
+import departmentRouter from "./department.router.js";
+import purchaseRouter from './purchase.router.js';
+import warehouseRouter from "./warehouse.router.js";
+import paymentRouter from "./payment.router.js";
+import bookingRouter from "./booking.router.js";
+import eventRouter from "./event.router.js";
+import reviewRouter from "./review.router.js";
+import carBookingRouter from "./carBooking.router.js";
+import driverRouter from "./driver.router.js";
+import vehicleRouter from "./vehicle.router.js";
+import meetingBookingRouter from "./meetingBooking.router.js";
+import meetingRoomRouter from "./meetingRoom.router.js";
+import meetingReportRouter from "./meetingReport.router.js";
+
+const router = Router();
+
+router.use("/ingredients", ingredientRouter);
+router.use("/ingredient-groups", ingredientGroupRouter);
+router.use("/auth", authRouter);
+router.use('/users', userRouter);
+router.use('/dishes', dishRouter);
+router.use('/menus', menuRouter);
+router.use('/orgs', orgRouter);
+router.use('/uoms', uomRouter);
+router.use("/departments", departmentRouter);
+router.use('/purchase-orders', purchaseRouter);
+router.use("/warehouses", warehouseRouter);
+router.use("/payments", paymentRouter);
+router.use("/bookings", bookingRouter);
+router.use("/events", eventRouter);
+router.use("/reviews", reviewRouter);
+router.use("/car-bookings", carBookingRouter);
+router.use("/drivers", driverRouter);
+router.use("/vehicles", vehicleRouter);
+router.use("/meeting-bookings", meetingBookingRouter);
+router.use("/meeting-rooms", meetingRoomRouter);
+router.use("/meeting-reports", meetingReportRouter);
+
+export default router;
